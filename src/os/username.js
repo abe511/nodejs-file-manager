@@ -1,8 +1,8 @@
-import { DATA } from "../../index.js";
+import os from "os";
 
 const showUsername = () => {
-    // console.log(os.userInfo().username);
-    process.stdout.write(`User name: ${DATA["username"]}\n`);
+    process.stdout.write(`${os.userInfo().username}\n`);
 }
+
 
 export default showUsername;
