@@ -5,7 +5,6 @@ import showGreetings from "./src/cli/greets.js";
 import exitProcess from "./src/cli/exit.js";
 
 const USERNAME = process.argv.slice(2)[1].split("=")[1];
-
 export const DATA = {
     username: USERNAME
 };
@@ -18,7 +17,7 @@ const main = () => {
     // EXIT ON CTRL+C
     process.on("SIGINT", () => {
         process.stdout.write("\n");
-        exitProcess(USERNAME, "SIGINT");
+        exitProcess(USERNAME);
     });
 
     // MAIN LOOP 

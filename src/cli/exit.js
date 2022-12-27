@@ -1,7 +1,6 @@
 
-const exitProcess = (username, signal=null) => {
-    const newline = signal ? "" : "\n";
-    process.stdout.write(`Thank you for using File Manager, ${username}, goodbye!${newline}`);
+const exitProcess = (username) => {
+    process.stdout.write(`Thank you for using File Manager, Mr. ${username}, goodbye!\n`);
     process.exit(0);
 }
 
